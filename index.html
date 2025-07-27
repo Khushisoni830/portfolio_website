@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khushi Soni | Portfolio</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- AOS Animation Styles -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        once: true,           // Animations occur only once
+        duration: 800,        // Duration of animation
+        easing: 'ease-in-out' // Easing style
+      });
+    });
+  </script>
+
+  <!-- Responsive Enhancements -->
+  <style>
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .hero-content img {
+        width: 150px;
+        height: 150px;
+        margin-top: 1rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .project, .education-item, .skill-box {
+        margin: 1rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1, h2, h3 {
+        font-size: 1.2rem;
+      }
+      .cta, .resume-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+      }
+      .hero-content {
+        padding: 1rem;
+      }
+      .social-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+  <div class="logo">KS</div>
+
+  <ul class="nav-links">
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="toggle-mode" />
+      <span class="slider"></span>
+    </label>
+  </div>
+</nav>
+
+
+
+
+  <!-- Fullscreen Hero Section -->
+  <section id="home" class="hero-section">
+  <div class="hero-container">
+    <!-- Left: Text -->
+    <div class="hero-text" data-aos="fade-right">
+      <h1>Hello, I am <span>Khushi Soni</span></h1>
+      <p>Electronics and Communication Engineer | Web Developer | Python Developer</p>
+
+      <div class="buttons">
+        <a href="#about" class="cta">Explore Portfolio</a>
+        <a href="img\Khushi_Soni_Resume[S].pdf" download class="cta resume-btn">Download Resume</a>
+        <a href="img\Khushi_Soni_Resume[S].pdf" target="_blank" class="cta">View Resume</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://github.com/Khushisoni830" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/khushi-soni-405884280/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:khu830shi@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="hero-photo">
+  <img src="img\formal photo.jpg" alt="Khushi Soni">
+</div>
+
+  </div>
+</section>
+
+
+
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up">
+  <h2 id="about" data-aos="zoom-in">About Me</h2>
+  <p data-aos="fade-up" data-aos-delay="200">
+    
+    I am Khushi Soni, an Electronics and Communication Engineering student at SISTec with a 
+    strong foundation in Python, web development (HTML, CSS, JavaScript), IoT, and embedded systems.
+     I completed a web development internship at IIT Roorkee, where I contributed to the frontend of an electronics-based project. My key projects include FRIDAY (Desktop AI Assistant), and NOVA (Offline Voice AI Assistant). 
+     I have been recognized in national-level competitions such as the G20 India Inventor Challenge and Kriyeta 3.0. I am passionate about building innovative, tech-driven solutions that create real-world impact.
+   </section>
+
+  <!-- Education Section -->
+  <section id="education">
+  <h2 data-aos="fade-right">Education</h2>
+
+  <div class="education-item" data-aos="fade-up" data-aos-delay="100">
+    <h3>B.Tech in Electronics and Communication Engineering</h3>
+    <p>Sagar Institute of Science & Technology (SISTec), Bhopal</p>
+    <p>2022 – 2026 | CGPA: 7.2</p>
+  </div>
+
+  <div class="education-item" data-aos="fade-up" data-aos-delay="200">
+    <h3>Class XII – M.P. Board</h3>
+    <p>Sarojini Naidu Girls H.S. School, Bhopal</p>
+    <p>2021 – 2022 | 69.8%</p>
+  </div>
+
+  <div class="education-item" data-aos="fade-up" data-aos-delay="300">
+    <h3>Class X – M.P. Board</h3>
+    <p>Pragya H.S. School, Bhopal</p>
+    <p>2019 – 2020 | 76.8%</p>
+  </div>
+</section>
+
+
+  <!-- Skills Section -->
+ <section id="skills" data-aos="fade-up">
+  <h2>My Skills</h2>
+  <div class="skills-boxes">
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      <h3>Python</h3>
+      <p>Proficient in scripting and automation.</p>
+      
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+      <h3>HTML/CSS/JavaScript</h3>
+      <p>Frontend development for modern web apps.</p>
+      
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+      <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" alt="IoT" style="width:40px">
+      <h3>IoT (ESP32, Firebase)</h3>
+      <p>Built real-time connected systems.</p>
+      
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+      <h3>SQL</h3>
+      <p>Efficient database management and queries.</p>
+      
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+      <img src="img\aws.png" alt="AWS">
+      <h3>AWS</h3>
+      <p>Cloud deployment and basic configurations.</p>
+      
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+      <h3>Git & GitHub</h3>
+      <p>Version control and collaboration.</p>
+      
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
+      <img src="https://cdn-icons-png.flaticon.com/512/1195/1195528.png" alt="Embedded C" style="width:40px">
+      <h3>Embedded Systems</h3>
+      <p>Microcontrollers and C programming.</p>
+      
+    </div>
+
+    <div class="skill-card" data-aos="fade-up" data-aos-delay="800">
+      <img src="img\images.png" alt="KiCad" style="width:40px">
+      <h3>PCB Design (KiCad)</h3>
+      <p>Designing and simulating PCBs.</p>
+      
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Experience Section -->
+  <section id="experience" data-aos="fade-up">
+  <h2>Experience</h2>
+
+  <div class="experience-item" data-aos="fade-right" data-aos-delay="200">
+    <h3>Web Development Intern – IIT Roorkee</h3>
+    <p class="date">March 2024 – June 2024</p>
+    <p>
+      Contributed to the development of a web-enabled experiment as part of the Virtual Labs initiative in the Electronics Measurement and Instrumentation domain. Worked on frontend technologies like HTML, CSS, and JavaScript to build interactive and responsive user interfaces. Gained practical exposure to real-world virtual lab integration under the guidance of IIT Roorkee faculty.
+    </p>
+  </div>
+</section>
+
+
+
+  <!-- Projects Section -->
+  <section id="projects">
+  <h2 data-aos="fade-up">Projects</h2>
+
+  
+  <div class="project-box" data-aos="fade-up" data-aos-delay="200">
+    <h3>🤖 FRIDAY – Desktop AI Assistant</h3>
+    <p>
+      Designed and implemented a voice-controlled AI assistant that performs system-level tasks using Python. The assistant can open files, send emails, search the web, and more—all through simple voice commands. This project showcases skills in Python automation and voice interface integration.
+    </p>
+    <p><strong>Technologies:</strong> Python, pyttsx3, SpeechRecognition, OS libraries</p>
+  </div>
+
+  <div class="project-box" data-aos="fade-up" data-aos-delay="300">
+    <h3>🎙️ NOVA – Offline Voice AI Assistant</h3>
+    <p>
+      Developed a voice-controlled smart home system using the VC02 speech recognition
+      module with firmware built through AI Thinker tools. The system operates entirely 
+      offline, allowing users to control appliances through predefined voice commands without
+      requiring internet access. It ensures real-time response, energy efficiency, and data
+      privacy, making it ideal for embedded automation applications.
+    </p>
+    <p><strong>Technologies:</strong> VC02 Speech Recognition Module, AI Thinker Firmware Tools, Offline Voice Command Control</p>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <div class="contact-container">
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:khu830shi@gmail.com" target="_blank">khu830shi@gmail.com</a>
+      
+    </div>
+    
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <p>Bhopal, Madhya Pradesh, India</p>
+    </div>
+    <div class="contact-item">
+      <i class="fab fa-linkedin"></i>
+      <a href="https://www.linkedin.com/in/khushi-soni-405884280/" target="_blank">LinkedIn Profile</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn">&#8593;</button>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Khushi Soni | Thank you for your time and interest.
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links li a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

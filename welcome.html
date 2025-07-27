@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | Khushi Soni</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #0f172a 40%, #1e3a8a 100%);
+    }
+
+   canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+
+
+    .content {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  background: transparent; /* Remove dark overlay */
+  backdrop-filter: none;   /* Optional: Remove blur */
+}
+
+   h1 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+  font-weight: 500;
+  margin-bottom: 20px;
+  animation: fadeInText 1s ease-out;
+}
+
+
+    button {
+      padding: 14px 34px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #1e3a8a;
+      background-color: #facc15;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      animation: fadeInText 1.5s ease-out;
+    }
+    #typing {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 400;
+  height: 1.2em;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #94a3b8;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+    button:hover {
+      background-color: #fde047;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+  font-size: 2.8rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 500;
+  animation: fadeInText 1s ease-out;
+}
+
+.welcome-heading {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.khushi-name {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #facc15;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #facc15;
+  animation: popIn 1s ease-out, floatUp 4s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 768px) {
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.role-line {
+  font-size: 1rem;
+  color: #94a3b8;
+  font-weight: 400;
+  display: block;
+  margin-top: 2px;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .khushi-name {
+    font-size: 2.2rem;
+  }
+  button {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+}
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #facc15;
+  background-color: rgba(255,255,255,0.05);
+  padding: 8px 12px;
+  border-radius: 8px;
+  z-index: 4;
+}
+
+button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.4); }
+  70% { box-shadow: 0 0 0 20px rgba(250, 204, 21, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(250, 204, 21, 0); }
+}
+button {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(250, 204, 21, 0);
+}
+
+button:hover {
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.6);
+  transform: scale(1.05);
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.1), rgba(255,255,255,0.6), rgba(255,255,255,0.1));
+  transform: skewX(-20deg);
+}
+
+button:hover::before {
+  animation: shimmer 1s forwards;
+}
+
+@keyframes shimmer {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+button {
+  animation: breathing 4s ease-in-out infinite;
+}
+
+@keyframes breathing {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+
+ </style>
+</head>
+<body>
+<div class="logo">KS</div>
+
+<canvas id="bgCanvas"></canvas>
+
+<div class="content">
+
+  <img src="img\formal photo.jpg" alt="Profile" class="profile-img" />
+
+  <h1>
+    <span class="welcome-heading">Welcome to the Portfolio of</span>
+    <span class="khushi-name">Khushi Soni</span>
+    <span class="welcome-heading">Electronics and Communication Engineer</span>
+    <span class="role-line" id="typing"></span>
+  </h1>
+
+  <button onclick="fadeToPortfolio()">Enter Portfolio</button>
+</div>
+
+<script>
+ 
+  const canvas = document.getElementById('bgCanvas');
+  const ctx = canvas.getContext('2d');
+
+  let w = canvas.width = window.innerWidth;
+  let h = canvas.height = window.innerHeight;
+
+  const dots = [];
+  const dotCount = 180;
+  const repelRadius = 150; // try 80 instead of 100
+  const connectDistance = 100;
+
+  const colors = ["#60a5fa", "#a78bfa", "#f472b6"]; // blue, purple, pink
+
+  for (let i = 0; i < dotCount; i++) {
+    dots.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      ox: 0, oy: 0,
+      radius: 3 + Math.random() * 2,
+      color: colors[Math.floor(Math.random() * colors.length)]
+    });
+  }
+
+  for (let dot of dots) {
+    dot.ox = dot.x;
+    dot.oy = dot.y;
+  }
+
+  let mouse = { x: w / 2, y: h / 2 };
+  window.addEventListener("mousemove", e => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  window.addEventListener("resize", () => {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  });
+
+  function drawLines() {
+    for (let i = 0; i < dots.length; i++) {
+      for (let j = i + 1; j < dots.length; j++) {
+        let dx = dots[i].x - dots[j].x;
+        let dy = dots[i].y - dots[j].y;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < connectDistance) {
+          let opacity = 1 - dist / connectDistance;
+          ctx.beginPath();
+          ctx.moveTo(dots[i].x, dots[i].y);
+          ctx.lineTo(dots[j].x, dots[j].y);
+          ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.5})`;
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
+
+    // update and draw dots
+    for (let dot of dots) {
+      let dx = dot.x - mouse.x;
+      let dy = dot.y - mouse.y;
+      let dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < repelRadius) {
+        let angle = Math.atan2(dy, dx);
+        let force = (repelRadius - dist) / repelRadius;
+        dot.x += Math.cos(angle) * force * 20;
+        dot.y += Math.sin(angle) * force * 20;
+
+      } else {
+        dot.x += (dot.ox - dot.x) * 0.25;
+        dot.y += (dot.oy - dot.y) * 0.25;
+
+      }
+
+      ctx.beginPath();
+      ctx.arc(dot.x, dot.y, dot.radius, 0, Math.PI * 2);
+      ctx.fillStyle = dot.color;
+      ctx.shadowColor = dot.color;
+      ctx.shadowBlur = 8;
+      ctx.fill();
+    }
+
+    drawLines(); // connect the dots with lines
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+<script>
+  const roles = ["Python Development", "Web Development", "Software Development"];
+  let i = 0, j = 0, forward = true;
+
+  function type() {
+    const typing = document.getElementById("typing");
+    typing.innerText = roles[i].substring(0, j);
+    forward ? j++ : j--;
+
+    if (j > roles[i].length + 10) forward = false;
+    if (j < 0) {
+      forward = true;
+      i = (i + 1) % roles.length;
+    }
+
+    setTimeout(type, forward ? 120 : 50);
+  }
+
+  type();
+</script>
+<button onclick="fadeToPortfolio()">Enter Portfolio</button>
+
+<script>
+function fadeToPortfolio() {
+  document.body.style.transition = "opacity 0.6s ease";
+  document.body.style.opacity = 0;
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 600);
+}
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  w = canvas.width;
+  h = canvas.height;
+
+  for (let dot of dots) {
+    dot.ox = Math.random() * w;
+    dot.oy = Math.random() * h;
+    dot.x = dot.ox;
+    dot.y = dot.oy;
+  }
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas(); // call once at start
+
+</script>
+
+</body>
+</html>
